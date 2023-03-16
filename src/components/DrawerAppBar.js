@@ -1,22 +1,27 @@
 import React from "react";
 
-import {AppBar,Stack, Box} from "@mui/material";
+import {
+  AppBar,
+  Stack,
+  Box,
+  CssBaseline,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Toolbar,
+  Button,
+} from "@mui/material";
 
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+
+import Dagizo_Logo from "./images/Dagizo_Logo.png"
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["Home", "Features", "Price Plans", "Contact Us"];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -28,9 +33,10 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
+      <Box sx={{my:2}}>
+        {" "}
+        <img src={Dagizo_Logo} alt="Dagizo Logo"></img>
+      </Box>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -48,10 +54,14 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box  sx={{ display: "flex"}}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar elevation={0} sx={{bgcolor: "primary.main"}}>
-        <Stack direction="row" alignItems="center" sx={{minHeight:60, mx:15}}>
+      <AppBar elevation={0} sx={{ bgcolor: "white" }}>
+        <Stack
+          direction="row"
+          alignItems="center"
+          sx={{ minHeight: 70, mx: 15 }}
+        >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -61,19 +71,32 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
+          {/* <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
             MUI
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          </Typography> */}
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "block" } }}>
+            <img src={Dagizo_Logo} alt="Dagizo Logo"></img>
+          </Box>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff", textTransform: "none" }}>
+              <Button
+                key={item}
+                sx={{
+                  fontSize: "1rem",
+                  color: "#666666",
+                  textTransform: "none",
+                  mr: 5,
+                }}
+              >
                 {item}
               </Button>
             ))}
+
+            <Button variant="outlined" sx={{color: "primary.main", borderRadius: 5, length: 25}}>Sign Up</Button>
           </Box>
         </Stack>
       </AppBar>
