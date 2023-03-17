@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Typography, Stack, Button, Icon, List, ListItem } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Stack,
+  Button,
+  Icon,
+  List,
+  ListItem,
+} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 //Icons
 import QrCodeIcon from "@mui/icons-material/QrCode";
@@ -13,6 +21,7 @@ import DrawerAppBar from "../components/DrawerAppBar";
 import Dagizo_CTA from "../images/Dagizo_CTA.png";
 import Dagizo_Peek from "../images/Dagizo_Peek.png";
 import Featured_Dishes from "../images/Featured_Dishes.png";
+import Order_Progress from "../images/Order_Progress.png";
 
 const LandingPage = () => {
   return (
@@ -305,7 +314,7 @@ const LandingPage = () => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={5}>
+      <Grid container spacing={5} sx={{ mt: 5 }}>
         <Grid xs={12} md={6}>
           <Box>
             <img src={Featured_Dishes} alt="Featured Dishes"></img>
@@ -339,7 +348,7 @@ const LandingPage = () => {
             <List
               sx={{
                 listStyleType: "disc",
-                pl:3,
+                pl: 3,
                 "& .MuiListItem-root": {
                   display: "list-item",
                   fontSize: "1.2rem",
@@ -347,11 +356,130 @@ const LandingPage = () => {
               }}
             >
               <ListItem>Online & Offline order syncing </ListItem>
-              <ListItem>Ability to view the complete details & the complete order history</ListItem>
+              <ListItem>
+                Ability to view the complete details & the complete order
+                history
+              </ListItem>
               <ListItem>List & Grid View of Orders</ListItem>
               <ListItem>Add Custom tags for identification</ListItem>
             </List>{" "}
           </Box>
+        </Grid>
+      </Grid>
+
+      <Grid container spacing={5} sx={{ mt: 5 }}>
+        <Grid xs={12} md={6}>
+          <Box
+            sx={(theme) => ({
+              mt: 15,
+              ml: 5,
+              [theme.breakpoints.down("lg")]: {
+                mt: 2,
+              },
+            })}
+          >
+            <Typography variant="h3" fontWeight="600" sx={{ color: "black" }}>
+              CUSTOMER & FEEDBACK <br />
+              MANAGEMENT
+            </Typography>
+          </Box>
+
+          <Box sx={{ my: 2, ml: 5 }}>
+            <Typography variant="h6">
+              With Dagizo POS system, you are able to see your customer
+              profiles, details of their <br /> orders, and their experience at
+              your restaurant from their reviews, all on a single interface
+            </Typography>
+          </Box>
+
+          <Box sx={{ ml: 5 }}>
+            {" "}
+            <List
+              sx={{
+                listStyleType: "disc",
+                pl: 3,
+                "& .MuiListItem-root": {
+                  display: "list-item",
+                  fontSize: "1.2rem",
+                },
+              }}
+            >
+              <ListItem>See all their orders and reservations </ListItem>
+              <ListItem>Track their payment history</ListItem>
+              <ListItem>View thier favourite dishes</ListItem>
+              <ListItem>Assign orders to their tab</ListItem>
+            </List>{" "}
+          </Box>
+        </Grid>
+
+        <Grid xs={12} md={6}>
+          <Box>
+            <img src={Order_Progress} alt="Featured Dishes"></img>
+          </Box>
+        </Grid>
+      </Grid>
+
+      <Grid
+        container
+        spacing={5}
+        sx={{ bgcolor: "#FDF0D0", mt: 10, textAlign: "center" }}
+      >
+        {" "}
+        <Grid xs={12}>
+          {" "}
+          <Stack
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ mt: 20 }}
+          >
+            <Typography variant="h2" fontWeight="600">
+              WORK ACROSS <br /> MULTIPLE TEAMS
+            </Typography>
+          </Stack>
+          <Stack direction="row" justifyContent="center" alignItems="center">
+            <Typography variant="h6">
+              You can effectively communicate with your employees through an
+              in-app <br /> messaging feature. Dagizo POS system also helps you
+              manage their <br /> records, work history and any other importnt
+              employee data
+            </Typography>
+          </Stack>
+        </Grid>
+        <Grid container xs={12} spacing={5}>
+          <Grid xs={2}></Grid>
+          <Grid container xs={8} spacing={4}>
+          
+              <Grid xs={6}>
+                <Box>
+                  <Typography variant="h4" fontWeight="500">
+                    STAY ON <br /> TOP OF ALL REQUEST
+                  </Typography>{" "}
+                </Box>
+                <Box>
+                  <Typography variant="h6" fontWeight="500">
+                    Here goes some information about the complete system <br/> and it
+                    will be nice to have some lines
+                  </Typography>{" "}
+                </Box>
+              </Grid>
+              <Grid xs={6}>
+                {" "}
+                <Box>
+                  <Typography variant="h4" fontWeight="500">
+                    A CONCIERGE <br /> FOR YOUR EMPLOYEES
+                  </Typography>{" "}
+                </Box>
+                <Box>
+                  <Typography variant="h6" fontWeight="500">
+                    Here goes some information about the complete system  <br/> and it
+                    will be nice to have some lines
+                  </Typography>{" "}
+                </Box>
+              </Grid>
+           
+          </Grid>
+          <Grid xs={2}></Grid>
         </Grid>
       </Grid>
     </Box>
