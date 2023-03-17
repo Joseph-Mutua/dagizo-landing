@@ -4,7 +4,7 @@ const theme = createTheme({
   // shadows: 0,
   palette: {
     primary: {
-      main: "#F4B315",
+      main: "#F4B315", //rgba(244, 179, 21, 1)
       tint_1: "#F6C244",
       tint_2: "#F8D173",
       tint_3: "#FBE1A1",
