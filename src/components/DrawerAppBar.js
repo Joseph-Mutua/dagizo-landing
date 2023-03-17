@@ -18,7 +18,7 @@ import {
 
 import MenuIcon from "@mui/icons-material/Menu";
 
-import Dagizo_Logo from "./images/Dagizo_Logo.png"
+import Dagizo_Logo from "../images/Dagizo_Logo.png"
 
 const drawerWidth = 240;
 const navItems = ["Home", "Features", "Price Plans", "Contact Us"];

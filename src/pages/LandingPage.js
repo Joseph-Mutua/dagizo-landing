@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -7,6 +7,11 @@ import {
   Icon,
   List,
   ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  TextField,
+  InputAdornment,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 //Icons
@@ -14,10 +19,17 @@ import QrCodeIcon from "@mui/icons-material/QrCode";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import TableRestaurantIcon from "@mui/icons-material/TableRestaurant";
-
-import Image from "mui-image";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 import DrawerAppBar from "../components/DrawerAppBar";
+
+import Dagizo_Logo from "../images/Dagizo_Logo.png";
 import Dagizo_CTA from "../images/Dagizo_CTA.png";
 import Dagizo_Peek from "../images/Dagizo_Peek.png";
 import Featured_Dishes from "../images/Featured_Dishes.png";
@@ -25,6 +37,11 @@ import Order_Progress from "../images/Order_Progress.png";
 import Project_Peek from "../images/Project_Peek.png";
 
 const LandingPage = () => {
+  const [tabValue, setTabValue] = useState("home");
+
+  const handleChange = (value) => {
+    setTabValue(value);
+  };
   return (
     <Box sx={{}}>
       <DrawerAppBar />
@@ -369,12 +386,12 @@ const LandingPage = () => {
       </Grid>
 
       <Grid container spacing={5} sx={{ mt: 5 }}>
-        <Grid xs={12} md={6}>
+        <Grid xs={12} md={6} sx={{}}>
           <Box
             sx={(theme) => ({
               mt: 15,
               ml: 5,
-              [theme.breakpoints.down("lg")]: {
+              [theme.breakpoints.down("md")]: {
                 mt: 2,
               },
             })}
@@ -496,19 +513,20 @@ const LandingPage = () => {
       </Grid>
 
       <Stack sx={{ bgcolor: "primary.main" }}>
-        <Stack sx={{ textAlign: "center", mt:15 }}>
+        <Stack sx={{ textAlign: "center", mt: 15 }}>
           {" "}
           <Typography variant="h3" sx={{ color: "white", fontWeight: 700 }}>
-           READY TO SET UP? <br/> LET US HELP YOU GET STARTED.
+            READY TO SET UP? <br /> LET US HELP YOU GET STARTED.
           </Typography>{" "}
         </Stack>
 
         <Stack sx={{ textAlign: "center" }}>
           {" "}
           <Typography
-            sx={{ color: "white", fontSize: "1.5rem", fontWeight: 500, mt:5 }}
+            sx={{ color: "white", fontSize: "1.5rem", fontWeight: 500, mt: 5 }}
           >
-           We are set to help you grow your business today and increase your sales by 50%
+            We are set to help you grow your business today and increase your
+            sales by 50%
           </Typography>{" "}
         </Stack>
 
@@ -535,6 +553,171 @@ const LandingPage = () => {
           </Button>{" "}
         </Stack>
       </Stack>
+
+      <Grid container spacing={5} sx={{ mt: 15 }}>
+        <Grid xs={1}></Grid>
+        <Grid container xs={10} spacing={5}>
+          <Grid xs={2}>
+            <Box sx={{ pl: 2 }}>
+              <img src={Dagizo_Logo} alt="Dagizo Logo"></img>
+            </Box>
+            <Box>
+              {" "}
+              <List>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <PhoneIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="+254 700 111 222" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <EmailIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="johndoe@gmail.com" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <LocationSearchingIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Street 2333 Nairobi" />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+            </Box>
+          </Grid>
+          <Grid xs={2}>
+            <Box>
+              <Typography
+                variant="h6"
+                fontWeight="700"
+                sx={{ color: "black", pl: 2 }}
+              >
+                GO TO PAGES
+              </Typography>
+            </Box>
+            <Box
+              display="flex"
+              justifyContent="flex-start"
+              sx={{
+                flexGrow: 1,
+                "& .MuiTab-root": {
+                  textTransform: "none",
+                  justifyContent: "flex-start",
+                },
+                height: 224,
+              }}
+            >
+              <List>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemText primary="Home" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemText primary="Features" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemText primary="How It Works" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemText primary="Price Plans" />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+            </Box>
+          </Grid>
+          <Grid xs={2}>
+            {" "}
+            <Box>
+              <Typography
+                variant="h6"
+                fontWeight="700"
+                sx={{ color: "black", pl: 2 }}
+              >
+                LINKS
+              </Typography>
+            </Box>
+            <Box
+              display="flex"
+              justifyContent="flex-start"
+              sx={{
+                flexGrow: 1,
+                "& .MuiTab-root": {
+                  textTransform: "none",
+                  justifyContent: "flex-start",
+                },
+                height: 224,
+              }}
+            >
+              <List>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemText primary="Terms & Conditions" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemText primary="Privacy Policy" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemText primary="FAQs" />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+            </Box>{" "}
+          </Grid>
+          <Grid xs={4}>
+            <Box>
+              <Typography
+                variant="h6"
+                fontWeight="700"
+                sx={{ color: "black" }}
+              >
+                SUBSCRIBE TO OUR NEWSLETTER
+              </Typography>
+            </Box>
+            <Box sx={{mt:2}}>
+              <TextField
+                sx={{
+                  "& fieldset": {
+                    borderRadius: 10,
+                  },
+                }}
+                placeholder="Email Address"
+                variant="outlined"
+                fullWidth
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <Button
+                        disableElevation
+                        variant="contained"
+                        sx={{ color: "white", borderRadius: 5 }}
+                      >
+                        SIGN UP NOW
+                      </Button>
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid xs={1}></Grid>
+      </Grid>
     </Box>
   );
 };
