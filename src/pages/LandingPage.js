@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Stack, Button, Icon } from "@mui/material";
+import { Box, Typography, Stack, Button, Icon, List, ListItem } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 //Icons
 import QrCodeIcon from "@mui/icons-material/QrCode";
@@ -12,6 +12,7 @@ import Image from "mui-image";
 import DrawerAppBar from "../components/DrawerAppBar";
 import Dagizo_CTA from "../images/Dagizo_CTA.png";
 import Dagizo_Peek from "../images/Dagizo_Peek.png";
+import Featured_Dishes from "../images/Featured_Dishes.png";
 
 const LandingPage = () => {
   return (
@@ -25,15 +26,13 @@ const LandingPage = () => {
       <Stack sx={{ bgcolor: "primary.main" }}>
         <Stack sx={{ textAlign: "center" }}>
           {" "}
-          <Typography variant="h1" sx={{ color: "white", fontWeight: 700 }}>
+          <Typography variant="h2" sx={{ color: "white", fontWeight: 700 }}>
             WE HELP YOU ORGANIZE
           </Typography>{" "}
         </Stack>
         <Stack sx={{ textAlign: "center" }}>
           {" "}
-          <Typography
-            sx={{ color: "black", fontSize: "4rem", fontWeight: 700, mt: -3 }}
-          >
+          <Typography variant="h2" sx={{ color: "black", fontWeight: 700 }}>
             YOUR RESTAURANT.
           </Typography>{" "}
         </Stack>
@@ -98,13 +97,13 @@ const LandingPage = () => {
           <Stack sx={{ textAlign: "start", mt: 15, ml: 8 }}>
             <Box>
               {" "}
-              <Typography variant="h2" fontWeight="700" sx={{ color: "black" }}>
+              <Typography variant="h3" fontWeight="700" sx={{ color: "black" }}>
                 ONE PLATFORM
               </Typography>
             </Box>
             <Box>
               {" "}
-              <Typography variant="h2" fontWeight="600" sx={{ color: "black" }}>
+              <Typography variant="h3" fontWeight="700" sx={{ color: "black" }}>
                 MANY SOLUTIONS
               </Typography>
             </Box>
@@ -117,7 +116,7 @@ const LandingPage = () => {
                 interfaces to interact with
               </Typography>
 
-              <Box sx={{mt:5}}>
+              <Box sx={{ mt: 5 }}>
                 {" "}
                 <Button
                   variant="outlined"
@@ -223,7 +222,7 @@ const LandingPage = () => {
           </Grid>
           <Grid xs={6}>
             {" "}
-            <Stack justifyContent="center" sx={{ mt: 8 }}>
+            <Stack justifyContent="center" sx={{ mt: 2 }}>
               <Box
                 display="flex"
                 sx={{
@@ -266,7 +265,7 @@ const LandingPage = () => {
           </Grid>
           <Grid xs={6}>
             {" "}
-            <Stack justifyContent="center" sx={{ mt: 8 }}>
+            <Stack justifyContent="center" sx={{ mt: 2 }}>
               <Box
                 display="flex"
                 sx={{
@@ -303,6 +302,56 @@ const LandingPage = () => {
               </Box>
             </Stack>
           </Grid>
+        </Grid>
+      </Grid>
+
+      <Grid container spacing={5}>
+        <Grid xs={12} md={6}>
+          <Box>
+            <img src={Featured_Dishes} alt="Featured Dishes"></img>
+          </Box>
+        </Grid>
+        <Grid xs={12} md={6}>
+          <Box
+            sx={(theme) => ({
+              mt: 15,
+              [theme.breakpoints.down("lg")]: {
+                mt: 2,
+              },
+            })}
+          >
+            <Typography variant="h3" fontWeight="600" sx={{ color: "black" }}>
+              MANAGE ALL REQUESTS ON <br />
+              ONE PLATFORM
+            </Typography>
+          </Box>
+
+          <Box sx={{ my: 2 }}>
+            <Typography variant="h6">
+              A simple order tracking and management tool that brings all your
+              orders <br /> into a single dashboard and gives you real-time
+              access to to the order status
+            </Typography>
+          </Box>
+
+          <Box>
+            {" "}
+            <List
+              sx={{
+                listStyleType: "disc",
+                pl:3,
+                "& .MuiListItem-root": {
+                  display: "list-item",
+                  fontSize: "1.2rem",
+                },
+              }}
+            >
+              <ListItem>Online & Offline order syncing </ListItem>
+              <ListItem>Ability to view the complete details & the complete order history</ListItem>
+              <ListItem>List & Grid View of Orders</ListItem>
+              <ListItem>Add Custom tags for identification</ListItem>
+            </List>{" "}
+          </Box>
         </Grid>
       </Grid>
     </Box>
