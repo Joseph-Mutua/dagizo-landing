@@ -22,6 +22,7 @@ import Dagizo_CTA from "../images/Dagizo_CTA.png";
 import Dagizo_Peek from "../images/Dagizo_Peek.png";
 import Featured_Dishes from "../images/Featured_Dishes.png";
 import Order_Progress from "../images/Order_Progress.png";
+import Project_Peek from "../images/Project_Peek.png";
 
 const LandingPage = () => {
   return (
@@ -422,7 +423,7 @@ const LandingPage = () => {
       <Grid
         container
         spacing={5}
-        sx={{ bgcolor: "#FDF0D0", mt: 10, textAlign: "center" }}
+        sx={{ bgcolor: "primary.tint_5_bg", mt: 10, textAlign: "center" }}
       >
         {" "}
         <Grid xs={12}>
@@ -449,39 +450,91 @@ const LandingPage = () => {
         <Grid container xs={12} spacing={5}>
           <Grid xs={2}></Grid>
           <Grid container xs={8} spacing={4}>
-          
-              <Grid xs={6}>
-                <Box>
-                  <Typography variant="h4" fontWeight="500">
-                    STAY ON <br /> TOP OF ALL REQUEST
-                  </Typography>{" "}
-                </Box>
-                <Box>
-                  <Typography variant="h6" fontWeight="500">
-                    Here goes some information about the complete system <br/> and it
-                    will be nice to have some lines
-                  </Typography>{" "}
-                </Box>
-              </Grid>
-              <Grid xs={6}>
-                {" "}
-                <Box>
-                  <Typography variant="h4" fontWeight="500">
-                    A CONCIERGE <br /> FOR YOUR EMPLOYEES
-                  </Typography>{" "}
-                </Box>
-                <Box>
-                  <Typography variant="h6" fontWeight="500">
-                    Here goes some information about the complete system  <br/> and it
-                    will be nice to have some lines
-                  </Typography>{" "}
-                </Box>
-              </Grid>
-           
+            <Grid xs={12} sm={6}>
+              <Box>
+                <Typography variant="h4" fontWeight="500">
+                  STAY ON <br /> TOP OF ALL REQUEST
+                </Typography>{" "}
+              </Box>
+              <Box>
+                <Typography variant="h6" fontWeight="500">
+                  Here goes some information about the complete system <br />{" "}
+                  and it will be nice to have some lines
+                </Typography>{" "}
+              </Box>
+            </Grid>
+            <Grid xs={12} sm={6}>
+              {" "}
+              <Box>
+                <Typography variant="h4" fontWeight="500">
+                  A CONCIERGE <br /> FOR YOUR EMPLOYEES
+                </Typography>{" "}
+              </Box>
+              <Box>
+                <Typography variant="h6" fontWeight="500">
+                  Here goes some information about the complete system <br />{" "}
+                  and it will be nice to have some lines
+                </Typography>{" "}
+              </Box>
+            </Grid>
           </Grid>
           <Grid xs={2}></Grid>
         </Grid>
+        <Grid container xs={12} spacing={5}>
+          <Grid xs={1}></Grid>
+          <Grid xs={10}>
+            <Box sx={{ overflow: "contain" }}>
+              <img
+                src={Project_Peek}
+                alt="Project Peek"
+                style={{ height: "80%", width: "80%" }}
+              ></img>
+            </Box>
+          </Grid>
+          <Grid xs={1}></Grid>
+        </Grid>
       </Grid>
+
+      <Stack sx={{ bgcolor: "primary.main" }}>
+        <Stack sx={{ textAlign: "center", mt:15 }}>
+          {" "}
+          <Typography variant="h3" sx={{ color: "white", fontWeight: 700 }}>
+           READY TO SET UP? <br/> LET US HELP YOU GET STARTED.
+          </Typography>{" "}
+        </Stack>
+
+        <Stack sx={{ textAlign: "center" }}>
+          {" "}
+          <Typography
+            sx={{ color: "white", fontSize: "1.5rem", fontWeight: 500, mt:5 }}
+          >
+           We are set to help you grow your business today and increase your sales by 50%
+          </Typography>{" "}
+        </Stack>
+
+        <Stack
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ my: 5 }}
+        >
+          <Button
+            variant="outlined"
+            size="large"
+            sx={{
+              bgcolor: "black",
+              fontWeight: "500",
+              borderRadius: 5,
+              ":hover": {
+                bgcolor: "white", // theme.palette.primary.main
+                color: "primary.main",
+              },
+            }}
+          >
+            START YOUR FREE TRIAL TODAY
+          </Button>{" "}
+        </Stack>
+      </Stack>
     </Box>
   );
 };
