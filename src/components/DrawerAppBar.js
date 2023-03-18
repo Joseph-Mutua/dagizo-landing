@@ -60,7 +60,7 @@ function DrawerAppBar(props) {
         <Stack
           direction="row"
           alignItems="center"
-          sx={{ minHeight: 70, mx: 15 }}
+          sx={{ minHeight: 70, mx:2}}
         >
           <IconButton
             color="inherit"
