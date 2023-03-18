@@ -341,7 +341,7 @@ const LandingPage = () => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={5} sx={{ mt: 5 }}>
+      <Grid container spacing={5} sx={{ mt: 5, mx:3 }}>
         <Grid xs={12} md={6}>
           <Box>
             <img
@@ -351,11 +351,11 @@ const LandingPage = () => {
             ></img>
           </Box>
         </Grid>
-        <Grid xs={12} md={6} sx={{mx:3}}>
+        <Grid xs={12} md={6} >
           <Box
             sx={(theme) => ({
               mt: 15,
-              [theme.breakpoints.down("lg")]: {
+              [theme.breakpoints.down("md")]: {
                 mt: 2,
               },
             })}
