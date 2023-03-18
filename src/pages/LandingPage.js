@@ -829,7 +829,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="white" align="center">
       All Rights Reserved. {"Copyright © "}
-      <Link color="inherit" href="https://your-website.com/">
+      <Link color="inherit" href="https://dagizo.onrender.com/">
         Dagizo
       </Link>{" "}
       {new Date().getFullYear()}
