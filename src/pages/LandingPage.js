@@ -52,68 +52,73 @@ const LandingPage = () => {
         <img src={Dagizo_CTA} alt="Dagizo CTA"></img>
       </Stack>
       <Stack sx={{ bgcolor: "primary.main" }}>
-        <Stack sx={{ textAlign: "center" }}>
-          {" "}
-          <Typography variant="h2" sx={{ color: "white", fontWeight: 700 }}>
-            WE HELP YOU ORGANIZE
-          </Typography>{" "}
-        </Stack>
-        <Stack sx={{ textAlign: "center" }}>
-          {" "}
-          <Typography variant="h2" sx={{ color: "black", fontWeight: 700 }}>
-            YOUR RESTAURANT.
-          </Typography>{" "}
-        </Stack>
-
-        <Stack sx={{ textAlign: "center" }}>
-          {" "}
-          <Typography
-            sx={{ color: "white", fontSize: "1.5rem", fontWeight: 500 }}
-          >
-            Scale your business today with our unified POS system that will help
-            you provide exceptional customer satisfaction.
-          </Typography>{" "}
-        </Stack>
-
-        <Stack
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-          sx={{ my: 5 }}
-        >
-          <Button
-            variant="outlined"
-            size="large"
-            sx={{
-              bgcolor: "white",
-              fontWeight: "500",
-              borderRadius: 5,
-              mr: 4,
-              ":hover": {
-                bgcolor: "black", // theme.palette.primary.main
-                color: "white",
-              },
-            }}
-          >
+        <Grid container spacing={4}>
+          <Grid xs={2}></Grid>
+          <Grid xs={8}>
             {" "}
-            REQUEST A DEMO
-          </Button>{" "}
-          <Button
-            variant="outlined"
-            size="large"
-            sx={{
-              bgcolor: "black",
-              fontWeight: "500",
-              borderRadius: 5,
-              ":hover": {
-                bgcolor: "white", // theme.palette.primary.main
-                color: "primary.main",
-              },
-            }}
-          >
-            START YOUR FREE TRIAL TODAY
-          </Button>{" "}
-        </Stack>
+            <Stack sx={{ textAlign: "center" }}>
+              {" "}
+              <Typography variant="h2" sx={{ color: "white", fontWeight: 700 }}>
+                WE HELP YOU ORGANIZE
+              </Typography>{" "}
+            </Stack>
+            <Stack sx={{ textAlign: "center" }}>
+              {" "}
+              <Typography variant="h2" sx={{ color: "black", fontWeight: 700 }}>
+                YOUR RESTAURANT.
+              </Typography>{" "}
+            </Stack>
+            <Stack sx={{ textAlign: "center" }}>
+              {" "}
+              <Typography
+                sx={{ color: "white", fontSize: "1.5rem", fontWeight: 500 }}
+              >
+                Scale your business today with our unified POS system that will
+                help you provide exceptional customer satisfaction.
+              </Typography>{" "}
+            </Stack>
+            <Stack
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              sx={{ my: 5 }}
+            >
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  bgcolor: "white",
+                  fontWeight: "500",
+                  borderRadius: 5,
+                  mr: 4,
+                  ":hover": {
+                    bgcolor: "black", // theme.palette.primary.main
+                    color: "white",
+                  },
+                }}
+              >
+                {" "}
+                REQUEST A DEMO
+              </Button>{" "}
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  bgcolor: "black",
+                  fontWeight: "500",
+                  borderRadius: 5,
+                  ":hover": {
+                    bgcolor: "white", // theme.palette.primary.main
+                    color: "primary.main",
+                  },
+                }}
+              >
+                START YOUR FREE TRIAL TODAY
+              </Button>{" "}
+            </Stack>
+          </Grid>
+          <Grid xs={2}></Grid>
+        </Grid>
       </Stack>
       <Stack direction="row" justifyContent="center" sx={{ width: "100%" }}>
         <img src={Dagizo_Peek} style={{ width: "100vw" }}></img>
