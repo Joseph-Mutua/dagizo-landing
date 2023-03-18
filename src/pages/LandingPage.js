@@ -49,23 +49,31 @@ const LandingPage = () => {
 
       <Stack>
         {" "}
-        <img src={Dagizo_CTA} alt="Dagizo CTA"></img>
+        <img
+          src={Dagizo_CTA}
+          alt="Dagizo CTA"
+          style={{ widht: "100%", height: "100%" }}
+        ></img>
       </Stack>
       <Stack sx={{ bgcolor: "primary.main" }}>
         {" "}
-        <Stack sx={{ textAlign: "center", px:5 }}>
+        <Stack sx={{ textAlign: "center" }}>
           {" "}
-          <Typography variant="h2" sx={{ color: "white", fontWeight: 700 }}>
+          <Typography
+            sx={{ color: "white", fontSize: "3.5rem", fontWeight: 700 }}
+          >
             WE HELP YOU ORGANIZE
           </Typography>{" "}
         </Stack>
-        <Stack sx={{ textAlign: "center", px:5 }}>
+        <Stack sx={{ textAlign: "center" }}>
           {" "}
-          <Typography variant="h2" sx={{ color: "black", fontWeight: 700 }}>
+          <Typography
+            sx={{ color: "black", fontSize: "3.5rem", fontWeight: 700 }}
+          >
             YOUR RESTAURANT.
           </Typography>{" "}
         </Stack>
-        <Stack sx={{ textAlign: "center", px:5 }}>
+        <Stack sx={{ textAlign: "center" }}>
           {" "}
           <Typography
             sx={{ color: "white", fontSize: "1.5rem", fontWeight: 500 }}
@@ -335,7 +343,11 @@ const LandingPage = () => {
       <Grid container spacing={5} sx={{ mt: 5 }}>
         <Grid xs={12} md={6}>
           <Box>
-            <img src={Featured_Dishes} alt="Featured Dishes"></img>
+            <img
+              src={Featured_Dishes}
+              alt="Featured Dishes"
+              style={{ width: "100%", height: "100%" }}
+            ></img>
           </Box>
         </Grid>
         <Grid xs={12} md={6}>
@@ -432,7 +444,11 @@ const LandingPage = () => {
 
         <Grid xs={12} md={6}>
           <Box>
-            <img src={Order_Progress} alt="Featured Dishes"></img>
+            <img
+              src={Order_Progress}
+              alt="Featured Dishes"
+              style={{ width: "100%", height: "100%" }}
+            ></img>
           </Box>
         </Grid>
       </Grid>
