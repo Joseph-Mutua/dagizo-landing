@@ -122,7 +122,7 @@ const LandingPage = () => {
       <Grid container spacing={2}>
         <Grid xs={12} md={5}>
           {" "}
-          <Stack sx={{ textAlign: "start", mt: 15, ml: 8 }}>
+          <Stack sx={{ textAlign: "start", mt: 15, pl: 8 }}>
             <Box>
               {" "}
               <Typography variant="h3" fontWeight="700" sx={{ color: "black" }}>
@@ -558,7 +558,7 @@ const LandingPage = () => {
       <Grid container spacing={5} sx={{ mt: 15 }}>
         <Grid xs={2}></Grid>
         <Grid container xs={8} spacing={5}>
-          <Grid xs={2.5}>
+          <Grid xs={12} sm={6} md={2.5}>
             <Box sx={{ pl: 2 }}>
               <img src={Dagizo_Logo} alt="Dagizo Logo"></img>
             </Box>
@@ -592,7 +592,7 @@ const LandingPage = () => {
               </List>
             </Box>
           </Grid>
-          <Grid xs={2.5}>
+          <Grid xs={12} sm={6} md={2.5}>
             <Box>
               <Typography
                 variant="h6"
@@ -638,7 +638,7 @@ const LandingPage = () => {
               </List>
             </Box>
           </Grid>
-          <Grid xs={2.5}>
+          <Grid xs={12} sm={6} md={2.5}>
             {" "}
             <Box>
               <Typography
@@ -680,7 +680,7 @@ const LandingPage = () => {
               </List>
             </Box>{" "}
           </Grid>
-          <Grid xs={4.5}>
+          <Grid xs={12} sm={6} md={4.5}>
             <Box>
               <Typography variant="h6" fontWeight="700" sx={{ color: "black" }}>
                 SUBSCRIBE TO OUR NEWSLETTER
@@ -795,7 +795,14 @@ const LandingPage = () => {
         <Grid xs={2}></Grid>
       </Grid>
 
-      <Stack  sx={{ bgcolor: "primary.main", height: 40, alignItems: "center", justifyContent: "center" }}>
+      <Stack
+        sx={{
+          bgcolor: "primary.main",
+          height: 40,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Copyright />
       </Stack>
     </Box>
