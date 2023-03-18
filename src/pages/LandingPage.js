@@ -44,7 +44,7 @@ const LandingPage = () => {
     setTabValue(value);
   };
   return (
-    <Box sx={{}}>
+    <Stack>
       <DrawerAppBar />
 
       <Stack>
@@ -804,7 +804,7 @@ const LandingPage = () => {
       >
         <Copyright />
       </Stack>
-    </Box>
+    </Stack>
   );
 };
 
