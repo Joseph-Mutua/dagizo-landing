@@ -86,7 +86,7 @@ const LandingPage = () => {
           direction="row"
           justifyContent="center"
           alignItems="center"
-          sx={{ my: 5 }}
+          sx={{ my: 5, }}
         >
           <Button
             variant="outlined"
@@ -95,7 +95,7 @@ const LandingPage = () => {
               bgcolor: "white",
               fontWeight: "500",
               borderRadius: 5,
-              mr: 4,
+              mx: 2,
               ":hover": {
                 bgcolor: "black", // theme.palette.primary.main
                 color: "white",
@@ -109,6 +109,7 @@ const LandingPage = () => {
             variant="outlined"
             size="large"
             sx={{
+              mx:2,
               bgcolor: "black",
               fontWeight: "500",
               borderRadius: 5,
@@ -178,7 +179,7 @@ const LandingPage = () => {
         <Grid container xs={12} md={6} spacing={5}>
           <Grid xs={12} md={6}>
             {" "}
-            <Stack justifyContent="center" sx={{ mt: 8 }}>
+            <Stack justifyContent="center" sx={{ mt: 8, mx:3 }}>
               <Box
                 display="flex"
                 sx={{
@@ -217,7 +218,7 @@ const LandingPage = () => {
           </Grid>
           <Grid xs={12} md={6}>
             {" "}
-            <Stack justifyContent="center" sx={{ mt: 8 }}>
+            <Stack justifyContent="center" sx={{ mt: 8, mx:3 }}>
               <Box
                 display="flex"
                 sx={{
@@ -257,7 +258,7 @@ const LandingPage = () => {
           </Grid>
           <Grid xs={12} md={6}>
             {" "}
-            <Stack justifyContent="center" sx={{ mt: 2 }}>
+            <Stack justifyContent="center" sx={{ mt: 2, mx:3 }}>
               <Box
                 display="flex"
                 sx={{
@@ -300,7 +301,7 @@ const LandingPage = () => {
           </Grid>
           <Grid xs={12} md={6}>
             {" "}
-            <Stack justifyContent="center" sx={{ mt: 2 }}>
+            <Stack justifyContent="center" sx={{ mt: 2 ,mx:3 }}>
               <Box
                 display="flex"
                 sx={{
@@ -350,7 +351,7 @@ const LandingPage = () => {
             ></img>
           </Box>
         </Grid>
-        <Grid xs={12} md={6}>
+        <Grid xs={12} md={6} sx={{mx:3}}>
           <Box
             sx={(theme) => ({
               mt: 15,
