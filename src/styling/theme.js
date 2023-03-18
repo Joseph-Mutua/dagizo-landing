@@ -28,7 +28,7 @@ const theme = createTheme({
   typography: {
     fontFamily: ["Mulish"],
     allVariants: {
-      color: "#666666",
+      color: "#666666", //rgba(102, 102, 102, 1)
     },
     button: {
       textTransform: "none",

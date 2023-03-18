@@ -12,6 +12,7 @@ import {
   ListItemText,
   TextField,
   InputAdornment,
+  Link,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 //Icons
@@ -555,9 +556,9 @@ const LandingPage = () => {
       </Stack>
 
       <Grid container spacing={5} sx={{ mt: 15 }}>
-        <Grid xs={1}></Grid>
-        <Grid container xs={10} spacing={5}>
-          <Grid xs={2}>
+        <Grid xs={2}></Grid>
+        <Grid container xs={8} spacing={5}>
+          <Grid xs={2.5}>
             <Box sx={{ pl: 2 }}>
               <img src={Dagizo_Logo} alt="Dagizo Logo"></img>
             </Box>
@@ -591,7 +592,7 @@ const LandingPage = () => {
               </List>
             </Box>
           </Grid>
-          <Grid xs={2}>
+          <Grid xs={2.5}>
             <Box>
               <Typography
                 variant="h6"
@@ -637,7 +638,7 @@ const LandingPage = () => {
               </List>
             </Box>
           </Grid>
-          <Grid xs={2}>
+          <Grid xs={2.5}>
             {" "}
             <Box>
               <Typography
@@ -679,17 +680,13 @@ const LandingPage = () => {
               </List>
             </Box>{" "}
           </Grid>
-          <Grid xs={4}>
+          <Grid xs={4.5}>
             <Box>
-              <Typography
-                variant="h6"
-                fontWeight="700"
-                sx={{ color: "black" }}
-              >
+              <Typography variant="h6" fontWeight="700" sx={{ color: "black" }}>
                 SUBSCRIBE TO OUR NEWSLETTER
               </Typography>
             </Box>
-            <Box sx={{mt:2}}>
+            <Box sx={{ mt: 2 }}>
               <TextField
                 sx={{
                   "& fieldset": {
@@ -714,12 +711,108 @@ const LandingPage = () => {
                 }}
               />
             </Box>
+
+            <Box sx={{ mt: 4 }}>
+              <Typography variant="h6" fontWeight="700" sx={{ color: "black" }}>
+                FOLLOW US ON
+              </Typography>
+            </Box>
+            <Stack
+              direction="row"
+              justifyContent="flex-start"
+              alignItems="center"
+            >
+              <Stack
+                justifyContent="center"
+                alignItems="center"
+                sx={{
+                  m: 1,
+                  p: 1,
+                  border: 1,
+                  borderRadius: 5,
+                  borderColor: " rgba(102, 102, 102, .2) ",
+                }}
+              >
+                {" "}
+                <Icon>
+                  {" "}
+                  <FacebookIcon sx={{ color: "primary.main" }} />{" "}
+                </Icon>{" "}
+              </Stack>
+              <Stack
+                justifyContent="center"
+                alignItems="center"
+                sx={{
+                  m: 1,
+                  p: 1,
+                  border: 1,
+                  borderRadius: 5,
+                  borderColor: " rgba(102, 102, 102, .2) ",
+                }}
+              >
+                {" "}
+                <Icon sx={{ color: "primary.main" }}>
+                  {" "}
+                  <LinkedInIcon />{" "}
+                </Icon>{" "}
+              </Stack>
+              <Stack
+                justifyContent="center"
+                alignItems="center"
+                sx={{
+                  m: 1,
+                  p: 1,
+                  border: 1,
+                  borderRadius: 5,
+                  borderColor: " rgba(102, 102, 102, .2) ",
+                }}
+              >
+                <Icon sx={{ color: "primary.main" }}>
+                  {" "}
+                  <InstagramIcon />{" "}
+                </Icon>{" "}
+              </Stack>
+
+              <Stack
+                justifyContent="center"
+                alignItems="center"
+                sx={{
+                  m: 1,
+                  p: 1,
+                  border: 1,
+                  borderRadius: 5,
+                  borderColor: " rgba(102, 102, 102, .2) ",
+                }}
+              >
+                {" "}
+                <Icon sx={{ color: "primary.main" }}>
+                  <YouTubeIcon />
+                </Icon>{" "}
+              </Stack>
+            </Stack>
           </Grid>
         </Grid>
-        <Grid xs={1}></Grid>
+        <Grid xs={2}></Grid>
       </Grid>
+
+      <Stack  sx={{ bgcolor: "primary.main", height: 40, alignItems: "center", justifyContent: "center" }}>
+        <Copyright />
+      </Stack>
     </Box>
   );
 };
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="white" align="center">
+      All Rights Reserved. {"Copyright © "}
+      <Link color="inherit" href="https://your-website.com/">
+       Dagizo
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 
 export default LandingPage;
